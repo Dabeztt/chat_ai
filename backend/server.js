@@ -15,6 +15,9 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error(err));
 
+const chatRoute = require("./routes/chat");
+app.use("/api", chatRoute);
+
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
